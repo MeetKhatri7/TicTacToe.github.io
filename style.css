@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@100;300;400;600;700&family=Roboto:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: purple;
+  height: 65px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding: 0 12px;
+  margin: 0 -125px 0 0px;
+}
+nav ul {
+  list-style: none;
+  font-size: 27px;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+.box {
+  border: 2px black solid;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: rgb(255, 216, 255);
+}
+.gameInfo {
+  padding: 0 34px;
+  font-family: "Oswald", sans-serif;
+}
+.imgBox img {
+  display: none;
+  width: 270px;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+
+.Inforeset {
+  display: flex;
+  flex-direction: column;
+}
+
+#reset {
+  margin: 10px 169px 0px 21px;
+  padding: 6px 21px;
+  background-color: #ffc1ff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+}
+#reset:hover {
+  background-color: #e9a0e9;
+}
+.info {
+  margin: 6px 18px;
+  font-size: 22px;
+}
+.line {
+  background-color: #d820ee;
+  height: 0.4vw;
+  width: 30vw;
+  position: absolute;
+  transform: translate(0px, -141px) rotate(0deg);
+  /* transition: width 1s ease-in-out; */
+}
+
+@media (max-width: 800px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .container {
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+  .gameInfo h1 {
+    font-size: 26px;
+    margin: 13px 0 0 91px;
+  }
+  #reset {
+    margin: 10px 169px 0px 175px;
+  }
+  .info {
+    margin: 3px 0px 2px 170px;
+  }
+  .imgBox img {
+    margin: 0px 0px 0px 68px;
+  }
+  .line {
+    width: 65vw;
+  }
+}
